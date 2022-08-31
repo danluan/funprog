@@ -10,3 +10,7 @@ lor _ _ = T
 land :: Boolean -> Boolean -> Boolean
 land T T = T
 land _ _ = F
+
+ifthenelse :: Boolean -> a -> a -> a
+ifthenelse T x y = x
+ifthenelse F x y = y
