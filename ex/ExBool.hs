@@ -99,9 +99,7 @@ infixl 1 <==
 
 -- logical equivalence
 (<=>) :: Bool -> Bool -> Bool
-(<=>) True True = True
-(<=>) False False = True
-(<=>) _ _ = False
+(<=>) p q = (&&) ((==>) p q) ((==>) q p)
 
 
 infixr 1 <=>

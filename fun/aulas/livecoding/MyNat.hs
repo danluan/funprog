@@ -4,14 +4,13 @@ data Nat = Zero | Succ Nat -- Data constructors
 
 instance Show Nat where
     show Zero = "O"
-    show (Succ n) = "S" ++ show n
+    show $ Succ n = "S" ++ show n
 
 {-instance Eq Nat where
     Zero == Zero = True
     Zero == Succ _ = False
     (Succ n) == (Succ m) = True
     -}
-
 
 plus :: Nat -> Nat -> Nat
 plus n Zero = n
